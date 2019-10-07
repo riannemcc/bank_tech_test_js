@@ -40,14 +40,14 @@ describe("statement", function() {
     it("returns the schedule statement", function() {
         account.deposit(100);
         schedule.statement;
-        expect(account.statement()).toEqual("date || credit || debit || balance\\nWed Oct 23 2013 00:00:00 GMT+0100 (British Summer Time) || |100.00| || || 100.00")
+        expect(account.statement()).toEqual("date || credit || debit || balance\\n23/10/2013 || |100.00| || || 100.00")
     })
 
     it("returns multiple transactions with a header", function() {
         account.deposit(100);
         account.withdraw(20);
         schedule.statement;
-        expect(account.statement()).toEqual("date || credit || debit || balance\\nWed Oct 23 2013 00:00:00 GMT+0100 (British Summer Time) || |100.00| || || 100.00\\nWed Oct 23 2013 00:00:00 GMT+0100 (British Summer Time) || || |20.00| || 80.00")
+        expect(account.statement()).toEqual("date || credit || debit || balance\\n23/10/2013 || |100.00| || || 100.00\\n23/10/2013 || || |20.00| || 80.00")
     })
   });
 });

@@ -3,7 +3,11 @@ function Schedule(){
   }
 
   Schedule.prototype.submit = function(credit_amount, debit_amount, balance){
-    let date = Date(Date.now()); 
+    let d = new Date(); 
+    let curr_date = d.getDate();
+    let curr_month = d.getMonth() + 1;
+    let curr_year = d.getFullYear();
+    let date = (curr_date + "/" + curr_month + "/" + curr_year);
     this.transactions.push(`${date} || |${credit_amount}| |${debit_amount}| || ${balance}`) ;
   };
 

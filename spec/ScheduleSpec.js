@@ -20,6 +20,6 @@ describe("Schedule", function() {
     
       it("returns a credit transaction", function() {
           schedule.submit(10.00, "", 10.00)
-          expect(schedule.transactions).toEqual('Wed Oct 23 2013 00:00:00 GMT+0100 (British Summer Time)  || |10.00| || || 10.00')
+          expect(schedule.transactions).toEqual('23/10/2013 || |10.00| || || 10.00')
       });
     });
