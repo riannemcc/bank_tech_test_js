@@ -1,1 +1,3 @@
-# bank_tech_text_js
+# The Bank Tech Test 
+### Redone in javascript
+
