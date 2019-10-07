@@ -19,7 +19,7 @@ describe("Schedule", function() {
       });
     
       it("returns a credit transaction", function() {
-          schedule.submit(10.00, "", 10.00)
-          expect(schedule.transactions).toEqual('23/10/2013 || |10.00| || || 10.00')
+          schedule.submit("10.00", "", "10.00")
+          expect(schedule.transactions[0]).toEqual('23/10/2013 || |10.00| || || 10.00')
       });
     });
